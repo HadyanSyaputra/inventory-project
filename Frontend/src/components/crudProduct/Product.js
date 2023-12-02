@@ -212,11 +212,6 @@ const Product = () => {
                     <p class="text-lg font-bold text-gray-800">Created At</p>
                     <p class="text-gray-600">${new Date(product.createdAt).toLocaleDateString()}</p>
                 </div>
-                <div class="mb-4 justify-center">
-                <p class="text-lg font-bold text-gray-800">QR Code</p>
-                <div class="flex justify-center items-center">
-                    <img id="qrCodeImage" src="${url}" alt="QR Code" />
-                </div>
             </div>
             <div class="text-center flex justify-between items-center">
                 <button id="printButton" class="bg-blue-500 text-white px-4 py-2 rounded-md m-auto">
@@ -405,13 +400,13 @@ const Product = () => {
                                         <td className="border px-4 py-2">{productQty(product.Logs)}</td>
                                         <td className="border px-4 py-2">
                                             {product.keterangan === 'Check' ? (
-                                                <button className=" bg-[#5D9C59] text-white font-bold py-2 px-4 rounded">
+                                                <div className=" bg-[#40af39] text-center text-white font-bold py-2 px-4 rounded">
                                                     {product.keterangan}
-                                                </button>
+                                                </div>
                                             ) : (
-                                                <button className="bg-[#FF6464] text-white font-bold py-2 px-4 rounded">
+                                                <div className="bg-[#c73535] text-center text-white font-bold py-2 px-4 rounded">
                                                     {product.keterangan}
-                                                </button>
+                                                </div>
                                             )}
                                         </td>
                                         <td className="border px-4 py-2">{new Date(product.createdAt).toLocaleString()}</td>

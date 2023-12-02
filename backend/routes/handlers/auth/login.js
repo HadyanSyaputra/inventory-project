@@ -8,7 +8,6 @@ module.exports = async (req, res) => {
     if (!body.email || !body.password)
         return res.status(401).json({ error: 'Missing email or password' });
 
-    // Check email
     const user = await User.findOne({
         where: {
             email: body.email
@@ -20,7 +19,6 @@ module.exports = async (req, res) => {
             message: "Email is not found!"
         })
 
-    // Check Password
     const isPasswordCorrect = compareSync(body.password, user.password)
 
     if (!isPasswordCorrect)

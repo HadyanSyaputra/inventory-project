@@ -10,7 +10,6 @@ import { jwtDecode } from 'jwt-decode';
 const Dashboard = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [inventoryData, setInventoryData] = useState([]);
- 
 
   useEffect(() => {
     axios.get('http://localhost:5000/products')
@@ -39,7 +38,7 @@ const Dashboard = () => {
             Inventory Management Dashboard
           </h1>
           <h4 className="subtitle is-size-5 has-text-black mt-1">
-            <Link to={`/product`} className="btn bg-[#000000] hover:bg-[#fff1]  text-white hover:text-white font-semibold mx-1">Manage Product </Link>
+            <Link to={`/product`} className="btn bg-[#fff1] hover:bg-[#000000]  text-black hover:text-white font-semibold border-2 mx-1">Manage Product </Link>
           </h4>
         </div>
       </div>

@@ -39,9 +39,9 @@ const Navbar = () => {
     <nav class="bg-transparent-600 p-4 shadow-md decoration-slice">
           <div class="container mx-auto flex justify-between items-center">
             <ul class="flex space-x-4 justify-center">
-              <li><a href="/dashboard" class="text-black">Home</a></li>
-              <li><a href="/product" class="text-black">Products</a></li>
-              <li><a href="/LogActivity" class="text-black">LogActivity</a></li>
+              <li><a href="/dashboard" class="text-black hover:font-semibold">Home</a></li>
+              <li><a href="/product" class="text-black hover:font-semibold">Products</a></li>
+              <li><a href="/LogActivity" class="text-black hover:font-semibold">LogActivity</a></li>
             </ul>
         
             <div className="flex-none gap-2">

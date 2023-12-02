@@ -88,20 +88,21 @@ const EditProduct = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#03001C]">
+    <div className="min-h-screen flex flex-col bg-[#ffffff]">
       <Navbar/>
       <div className="flex-grow flex items-center justify-center">
         <div className="max-w-xl mx-auto w-full">
-          <form onSubmit={handleEdit} className="bg-gray-900 shadow-md rounded px-5 pt-6 pb-8 mb-4">
+          <form onSubmit={handleEdit} className="bg-slate-100 shadow-lg rounded px-5 pt-6 pb-8 mb-4">
+          <h2 className='font-semibold text-3xl text-center text-gray-900 mb-8'>Edit Product</h2>
             <div className="mb-4 ">
               <label
-                className="block text-white text-sm font-bold mb-2"
+                className="block text-gray-600 text-sm font-bold mb-2"
                 htmlFor="version"
               >
                 Version
               </label>
               <select
-                className="rounded-lg w-full bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none text-gray-400"
+                className="rounded-lg w-full bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none text-gray-300"
                 id="version"
                 value={version}
                 onChange={(e) => setVersion(e.target.value)}
@@ -115,11 +116,11 @@ const EditProduct = () => {
               </select>
             </div>
             <div className="field ">
-              <label className="block text-white text-sm font-bold mb-2">Product</label>
+              <label className="block text-gray-600 text-sm font-bold mb-2">Product</label>
               <div className="control ">
                 <input
                   type="text"
-                  className="rounded-lg w-full bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none text-gray-400"
+                  className="rounded-lg w-full bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none text-gray-300"
                   value={product}
                   onChange={(e) => setProduct(e.target.value)}
                   placeholder="Product"
@@ -127,11 +128,11 @@ const EditProduct = () => {
               </div>
             </div>
             <div className="field">
-              <label className="block text-white text-sm font-bold mb-2">Total Qty: {productData.totalQty}</label>
+              <label className="block text-gray-600 text-sm font-bold mb-2">Total Qty: {productData.totalQty}</label>
               <div className="control">
                 <input
                   type="text"
-                  className="rounded-lg w-full bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none text-gray-400"
+                  className="rounded-lg w-full bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none text-gray-300"
                   value={stock}
                   onChange={(e) => setQty(e.target.value)}
                   placeholder="Qty"
@@ -142,13 +143,13 @@ const EditProduct = () => {
             {!isStaff && (
             <div className="mb-4">
               <label
-                className="block text-white text-sm font-bold mb-2"
+                className="block text-gray-600 text-sm font-bold mb-2"
                 htmlFor="keterangan"
               >
-                Keterangan
+                Status
               </label>
               <select
-                className="rounded-lg w-full bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none text-gray-400"
+                className="rounded-lg w-full bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none text-gray-300"
                 id="keterangan"
                 value={keterangan}
                 onChange={(e) => setKeterangan(e.target.value)}
@@ -160,13 +161,13 @@ const EditProduct = () => {
             </div>
             )}
             <div className="field">
-              <button type="submit" className="btn bg-[#004225] hover:bg-[#1f533d] text-white hover:text-white font-semibold">
+              <button type="submit" className="btn w-full btn-accent font-semibold">
                 Update
               </button>
             </div>
             <div className="flex items-center justify-center mt-4">
               <button
-                className="btn w-full bg-[#DA0C81] hover:bg-[#c9609b] text-white hover:text-white font-semibold"
+                className="btn w-full btn-primary font-semibold"
                 onClick={() => navigate('/product')}
               >
                 Back to Products

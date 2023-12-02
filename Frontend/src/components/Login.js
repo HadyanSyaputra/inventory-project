@@ -79,30 +79,32 @@ const Login = () => {
 
                 <div className="bg-[#fff] flex flex-col justify-center">
                     <form onSubmit={handleLogin} className="max-w-[400px] w-full mx-auto p-8 px-8 rounded-lg">
-                        <h2 className="text-4xl dark:text-white font-bold mb-2">Hello Again!</h2>
-                        <p className=" dark:text-white mb-3">Welcome Back</p>
-                        <div className="flex flex-col text-gray-400 py-2">
+                        <h2 className="text-4xl text-black font-bold mb-2">Hello Again!</h2>
+                        <p className=" text-black mb-3">Welcome Back</p>
+                        <div className="flex flex-col text-gray-600 py-2">
                             <label>Email</label>
                             <div className="relative flex">
                                 <input
-                                    className="flex-1 rounded-[30px] border mt-2 p-2 pl-10 focus:border-grey-500 focus:outline-none"
+                                    className="flex-1 rounded-[30px] border mt-2 p-2 pl-10 text-gray-300 focus:border-grey-500 focus:outline-none"
                                     type="text"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
+                                    placeholder='Your Email'
                                 />
                             </div>
                             {submitted && !email && <p className="text-red-500">Email is required</p>}
                         </div>
-                        <div className="flex flex-col text-gray-400 py-2 relative">
+                        <div className="flex flex-col text-gray-600 py-2 relative">
                             <label htmlFor="password">Password</label>
                             <div className="relative flex">
                                 <input 
-                                    className= "flex-1 rounded-[30px] border mt-2 p-2 pl-10 focus:border-grey-500 focus:outline-none"
+                                    className= "flex-1 rounded-[30px] border mt-2 p-2 pl-10 text-gray-300 focus:border-grey-500 focus:outline-none"
                                     type={showPassword ? 'text' : 'password'}
                                     id="password"
                                     name="password"
                                     value={password}
                                     onChange={handlePasswordChange}
+                                    placeholder='Your Password'
                                 />
                                 <button 
                                     className="absolute left-72 p-3 mt-2"

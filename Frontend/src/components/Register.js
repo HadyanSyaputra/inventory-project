@@ -85,14 +85,13 @@ const Register = () => {
         <section>
             <div className="grid grid-cols-1 sm:grid-cols-2 h-screen w-full">
                 <div className="bg-white flex flex-col justify-center">
-                    <form onSubmit={handleRegister} className="max-w-[400px] w-full mx-auto p-8 px-8 rounded-lg shadow-md">
-                        <h2 className="text-4xl dark:text-white font-bold mb-2">Hello!</h2>
-                        <p className="dark:text-white mb-3">Sign Up to Get Started</p>
-                        {msg && <p className="text-red-500 mb-4">{msg}</p>}
-                        <label htmlFor="password">Name</label>
-                        <div className="flex flex-col text-gray-400 py-2">
+                    <form onSubmit={handleRegister} className="max-w-[400px] w-full mx-auto p-8 px-8 rounded-lg">
+                        <h2 className="text-4xl text-black font-bold mb-2">Hello!</h2>
+                        <p className="text-black mb-3">Sign Up to Get Started</p>
+                        <div className="flex flex-col text-gray-600 py-2">
+                            <label htmlFor="password">Name</label>
                             <input
-                                className="flex-1 rounded-[30px] border mt-2 p-2 pl-10 focus:border-grey-500 focus:outline-none"
+                                className="flex-1 rounded-[30px] border mt-2 p-2 pl-10 text-gray-300 focus:border-grey-500 focus:outline-none"
                                 type="text"
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
@@ -104,7 +103,7 @@ const Register = () => {
                         <label htmlFor="password">Select Role</label>
                             <div className="relative">
                                 <select
-                                    className="w-full appearance-none rounded-[30px] border py-2 pl-3 pr-10 placeholder-gray-500 focus:outline-none focus:border-gray-500 transition duration-300"
+                                    className="w-full appearance-none rounded-[30px] border py-2 pl-3 pr-10 text-gray-300 placeholder-gray-500 focus:outline-none focus:border-gray-500 transition duration-300"
                                     value={role}
                                     onChange={(e) => setRole(e.target.value)}
                                     id="role"
@@ -135,10 +134,10 @@ const Register = () => {
                                 <p className="text-sm text-red-500 mt-1">Role is required</p>
                             )}
                         </div>
-                        <div className="flex flex-col text-gray-400 py-2">
+                        <div className="flex flex-col text-gray-600 py-2">
                         <label htmlFor="password">Email</label>
                             <input
-                                className="flex-1 rounded-[30px] border mt-2 p-2 pl-10 focus:border-grey-500 focus:outline-none"
+                                className="flex-1 rounded-[30px] border mt-2 p-2 pl-10 text-gray-300 focus:border-grey-500 focus:outline-none"
                                 type="text"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
@@ -146,11 +145,11 @@ const Register = () => {
                             />
                             {submitted && !email && <p className="text-red-500">Email is required</p>}
                         </div>
-                        <div className="flex flex-col text-gray-400 py-2 relative">
+                        <div className="flex flex-col text-gray-600 py-2 relative">
                         <label htmlFor="password">Password</label>
                         <div className="relative flex">
                                 <input 
-                                    className= "flex-1 rounded-[30px] border mt-2 p-2 pl-10 focus:border-grey-500 focus:outline-none"
+                                    className= "flex-1 rounded-[30px] border mt-2 p-2 pl-10 text-gray-300 focus:border-grey-500 focus:outline-none"
                                     type={showPassword ? 'text' : 'password'}
                                     id="password"
                                     name="password"
@@ -171,8 +170,8 @@ const Register = () => {
                         <button className="w-full my-2 py-4 bg-black text-white font-semibold rounded-[30px] hover:bg-gray-800">
                             Register
                         </button>
-                        <button className="w-full my-2 py-2 hover:text-gray-800 text-gray text-sm font-semibold rounded-lg" onClick={navigateToLogin}>
-                            Back to Sign In
+                        <button className="w-full my-2 py-2 hover:text-gray-500 text-gray text-sm font-semibold rounded-lg" onClick={navigateToLogin}>
+                            Back to Sign In ?
                         </button>
                     </form>
                 </div>
