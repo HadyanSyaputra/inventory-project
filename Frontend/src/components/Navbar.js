@@ -42,6 +42,7 @@ const Navbar = () => {
               <li><a href="/dashboard" class="text-black hover:font-semibold">Home</a></li>
               <li><a href="/product" class="text-black hover:font-semibold">Products</a></li>
               <li><a href="/LogActivity" class="text-black hover:font-semibold">LogActivity</a></li>
+              <li><a href="https://scanner-zqer.vercel.app/" target="_blank" class="text-black hover:font-semibold">Scanner</a></li>
             </ul>
         
             <div className="flex-none gap-2">

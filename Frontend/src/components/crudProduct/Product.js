@@ -214,7 +214,7 @@ const Product = () => {
                 </div>
             </div>
             <div class="text-center flex justify-between items-center">
-                <button id="printButton" class="bg-blue-500 text-white px-4 py-2 rounded-md m-auto">
+                <button id="printButton" class="bg-blue-500 text-white px-5 py-2 rounded-md m-auto">
                     Print
                 </button>
             </div>
@@ -284,7 +284,7 @@ const Product = () => {
                 </div>
             </div>
             <div class="text-center flex justify-between items-center">
-                <button id="printButton" class="bg-blue-500 text-white px-4 py-2 rounded-md m-auto">
+                <button id="printButton" class="bg-blue-500 text-white px-5 py-2 rounded-md m-auto">
                     Print
                 </button>
             </div>
